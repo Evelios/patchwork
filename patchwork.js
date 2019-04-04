@@ -49,7 +49,7 @@ export default function createPlot (context, dimensions) {
     if (clusters.length === 0) return;
 
     // Sort clusters by density
-    clusters.sort((a, b) => b.length - a.length);
+    clusters.sort((a, b) => a.length - b.length);
 
     const cluster = clusters[0];
     const positions = cluster.map(i => points[i]);
@@ -68,10 +68,12 @@ export default function createPlot (context, dimensions) {
   }
 
   function draw () {
+    context.fillStyle = "white";
     lines.forEach(points => {
       context.beginPath();
       points.forEach(p => context.lineTo(p[0], p[1]));
       context.stroke();
+      context.fill();
     });
   }
 
