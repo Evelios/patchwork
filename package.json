@@ -19,6 +19,7 @@
   "dependencies": {
     "convex-hull": "^1.0.3",
     "density-clustering": "^1.3.0",
+    "new-array": "^1.0.0",
     "penplot": "^3.0.0"
   }
 }
